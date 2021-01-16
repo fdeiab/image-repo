@@ -3,3 +3,6 @@ This project creates a web application using the Flask framework. It allows user
 
 ## Demo
 To demo this project, visit https://www.imagerepo.tk/
+
+## Run Locally
+* Download the ZIP file of this repository 
