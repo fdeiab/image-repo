@@ -6,5 +6,4 @@ To demo this project, visit https://www.imagerepo.tk/
 
 ## Run Locally
 * Download the ZIP file of this repository 
-* Have your working directory set to /Image_Repo
-* Create a virtual enviroment if you don't have venv installed use: pip install virtualenv
+* Create a virtual enviroment (if you don't have venv installed use: ```pip install virtualenv```)
