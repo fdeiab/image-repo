@@ -23,6 +23,7 @@ To demo this project, visit https://www.imagerepo.tk/
 * The hosted version of the web app only works on HTTPS
 * Only 500 Megabytes per upload is allowed to mitigate DoS attacks
 * Images with file extensions .jpg, .jpeg, .png are accepted
-* Files uploaded are verified to ensure that they're images and not malicious files with the accepted file extensions. Files that fail the verification are met with a ```406 Not Acceptable``` response, similar to what is displayed below. 
+* Image filenames are changed before saving to the server to prevent malicious filenames such as '../../../.bashrc.jpg' from being uploaded.
+* Files uploaded are verified to ensure that they're images and not harmful files with the accepted file extensions. Files that fail the verification are met with a ```406 Not Acceptable``` response, similar to what is displayed below. 
 
 ![File Upload Error](readme-imgs/406error.gif)
