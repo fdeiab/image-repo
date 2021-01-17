@@ -4,6 +4,8 @@ This project creates a web application using the Flask framework. It allows user
 ## Demo
 To demo this project, visit https://www.imagerepo.tk/
 
+<img src="readme-imgs/home.gif" width="550" height="400"/>
+
 ## Run Locally
 * Download the ZIP file of this repository 
 * Create a virtual enviroment (if you don't have the venv command installed use: ```pip install virtualenv```)
