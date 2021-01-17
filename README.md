@@ -7,7 +7,7 @@ To demo this project, visit https://www.imagerepo.tk/
 <img src="readme-imgs/home.gif" width="550" height="400"/>
 
 ## Run Locally
-* Download the ZIP file of this repository 
+* Download the ZIP file of this repository (Only the Image_Repo directory is required. The readme-imgs directory and image-credits file can be deleted)
 * Create a virtual enviroment (if you don't have the venv command installed use: ```pip install virtualenv```)
   * Next, run ```python3 -m venv Image_Repo/venv```
   * Change the current working directory to Image_Repo
