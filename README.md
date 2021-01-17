@@ -7,7 +7,7 @@ To demo this project, visit https://www.imagerepo.tk/
 <img src="readme-imgs/home.gif" width="550" height="400"/>
 
 ## Run Locally
-* Download the ZIP file of this repository (Only the Image_Repo directory is required. The readme-imgs directory and image-credits file can be deleted)
+* Download the ZIP file of this repository (only the Image_Repo directory is required. The readme-imgs directory and image-credits file can be deleted)
 * Create a virtual enviroment (if you don't have the venv command installed use: ```pip install virtualenv```)
   * Next, run ```python3 -m venv Image_Repo/venv```
   * Change the current working directory to Image_Repo
@@ -28,4 +28,4 @@ To demo this project, visit https://www.imagerepo.tk/
 * Image filenames are changed before saving to the server to prevent malicious filenames such as '../../../.bashrc.jpg' from being uploaded.
 * Files uploaded are verified to ensure that they're images and not harmful files with the accepted file extensions. Files that fail the verification are met with a ```406 Not Acceptable``` response, similar to what is displayed below. 
 
-![File Upload Error](readme-imgs/406error.gif)
+<img src="readme-imgs/406error.gif" width="600" height="400"/>
