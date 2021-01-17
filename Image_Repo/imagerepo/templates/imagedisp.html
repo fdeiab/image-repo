@@ -1,0 +1,82 @@
+<!--  author: Fattima Deiab -->
+<!-- This file contains the HTML code for the home and my-pictures page -->
+{% extends "layout.html" %}
+{% block content %}
+       <div class="row">
+         {% if screen == 'home' %}
+          <div class="col-lg-12">
+              <h1 class="page-header" style="text-align:center;color:white"> Picture Gallery</h1>    
+              <p style="text-align:center;color:lightgrey">Last Updated On: {{time}}</p>
+              <hr style="height:15px;border:none;color:#a19d9d;background-color:#a19d9d;" /> 
+          </div>
+          
+          {% else %}
+          <div class = "content-section" style="width:820px">
+             <div class = "media">
+                <img class = "rounded-circle account-img" src = "{{ profile_img }}">
+                <div class = "media=body"> 
+                    <h2 class = "account-heading">{{ current_user.username }}'s Pictures </h2>
+                    <p class = "text-secondary" style="text-align:center">Below, you can update and delete any of your images ☺</p>
+                    {% if images.items %}
+                      <form  method="POST" action = "" enctype="multipart/form-data">
+                         <button type="button" class="btn-danger" data-toggle="modal" data-target="#deleteModal">Delete All</button>
+                      </form>
+                    {% endif %}
+                 </div>      
+              </div>
+          </div>
+
+          <!-- Modal taken from Bootstrap's website -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deleteModalLabel" style="text-align:center;padding-left:20px">Are you sure you want to delete all of your 
+                      pictures?
+                    <p class = "text-secondary" style="text-align:center;padding-left:20px"> (This action cannot be undone) </p>
+                  </h5>
+                   
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-close" data-dismiss="modal">Close</button>
+                  <form action="{{ url_for('delete_all')}}" method="POST">
+                    <input class="btn-danger" type="submit" value="Delete">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if not images.items %}
+          <h3 class="page-header" style="text-align:center;color:white;">Nothing to display here yet ... Upload some pictures!</h3>    
+          {% endif %}
+
+          {% for image in images.items %}
+          <div class = "column">
+            <a href="{{ url_for('image', imageID = image.imageID) }}">
+              <div class="img__wrap">
+              <img class="img" style="background-image:url('{{ url_for('static', filename = 'userimgs/' + image.imageName)}}')">
+              <p class="img__description" style="text-align:center;padding-top:100px ">Click Here For More Information</p>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+          <hr style="width:300px;color:#302d2d;background-color:#302d2d"/> 
+          {% for page_num in images.iter_pages() %}
+            {% if page_num %}
+              {% if images.page == page_num %}
+                <a class="btn btn-light mb-4" style="margin-top:auto;" href="{{ url_for(screen, page=page_num)}}">{{ page_num }}</a>
+              {% else %}
+                <a class="btn btn-outline-light mb-4" class="page-num" style="margin-top:auto;"href="{{ url_for(screen, page=page_num) }}">{{ page_num }}</a>
+              {% endif %}
+            {% else %}
+              <span style="color:white;margin-top:50px">...</span>
+            {% endif %}
+          {% endfor %}
+  
+       </div>
+{% endblock content %}

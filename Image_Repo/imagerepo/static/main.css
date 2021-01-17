@@ -1,0 +1,149 @@
+/* author: Fattima Deiab 
+  
+   This file contains the CSS code 
+   required for the design of the web app
+*/
+body {
+  background: #302d2d;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.navbar-custom { 
+    background-color: #CD5C5C; 
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.upload-section{
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 4px solid #CD5C5C;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-bottom: 5px;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img {
+     width: 250px;
+     height: 250px;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
+.resize {
+  width: auto;
+  height : 400px;
+}
+
+/* credit: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering */
+.img__wrap {
+  position: relative;
+  height: 266px;
+  width: 250px;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #CD5C5C;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 0.75;
+}
+
+input[type=submit]{
+  border-radius: 5px;
+  border: 0;
+  width: 80px;
+  height:25px;
+  font-family: Tahoma;
+  background: #d1d9cc;
+}
+
+.btn-danger{
+  border-radius: 5px;
+  border: 0;
+  width: 80px;
+  height:25px;
+  font-family: Tahoma;
+  background: #db2121;
+}
+
+.btn-close{
+  border-radius: 5px;
+  border: 0;
+  width: 80px;
+  height:25px;
+  font-family: Tahoma;
+  background: #999696;
+  color: #fff;
+}
+
+.page-btn{
+  display: grid;
+}

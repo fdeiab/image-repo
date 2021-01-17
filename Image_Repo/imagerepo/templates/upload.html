@@ -1,0 +1,20 @@
+<!--  author: Fattima Deiab -->
+<!-- This file contains the HTML code for the upload page -->
+{% extends "layout.html" %}
+{% block content %}
+    <h3 style="text-align:center;color:white">Upload Image(s) to the Repository</h3> 
+    <div class = "upload-section">  
+      <form  method="POST" action = "" enctype="multipart/form-data">
+        <script type="text/javascript" src="{{ url_for('static', filename='fileUploader.js') }}"></script>
+        <input type="file" name="file" id="imgfile" accept=".png, .jpg, .jpeg" multiple onchange="getFilenames()">
+        <p>---- Selected File(s) ----</p>
+        <div id= "filenamesList"></div>
+        <input type="checkbox" id="privimg" name="privimg" value="Private">
+        <label for="pubimg">Keep images private
+        <small class="text-muted"> <a>(This option can be changed later on)</a></small>
+        </label><br>
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+ 
+{% endblock content %}
