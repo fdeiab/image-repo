@@ -2,7 +2,7 @@
 This project creates a web application using the Flask framework. It allows users to create accounts, upload and delete their photos, and view other user's submission's on the home page. 
 
 ## Demo
-To demo this project, visit https://www.imagerepo.tk/
+To demo this project, visit <del>www.imagerepo.tk</del> *offline for now*
 
 <img src="readme-imgs/home.gif" width="550" height="400"/>
 
